@@ -10,4 +10,7 @@
 	<title>Galleria Slideshow</title>
 	<link rel="icon" href={favicon} />
 </svelte:head>
-{@render children()}
+
+<div class="p-7 flex flex-col gap-10">
+	{@render children()}
+</div>
