@@ -19,8 +19,16 @@
 <main>
     <div class="columns-1 md:columns-2 lg:columns-4 gap-10">
     {#each dataFile as item (item.name)}
-        <div class="flex flex-col mb-10 last:mb-0 md:max-h-max break-inside-avoid">
-            <img src={item.images.thumbnail} alt={item.name} class="w-full h-auto rounded-lg aspect-square md:aspect-auto" />
+        <div class="grid grid-cols-1 grid-rows-1 mb-10 last:mb-0 md:max-h-max break-inside-avoid hover:cursor-pointer">
+            <div class="col-span-full row-span-full">
+                <img src={item.images.thumbnail} alt={item.name} class="w-full h-auto rounded-lg" />
+            </div>
+            <div class="flex flex-col gap-3 mt-4 col-span-full row-span-full z-10 self-end p-7 
+                        bg-linear-to-t from-black/80 to-transparent rounded-lg">
+                <h3 class="text-xl font-extrabold text-white text-balance">{item.name}</h3>
+                <p class="text-xs text-muted/90 font-semibold">{item.artist.name}</p>
+            </div>
+            <span class="col-span-full row-span-full bg-transparent hover:bg-white/40 z-20"></span>
         </div>
     {/each}
     </div>
