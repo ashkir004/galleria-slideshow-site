@@ -36,9 +36,14 @@
 	
 		<a href={slideshow.slideshowStarted ? `/` + formatSlug(data.summaries[0].name) : '/'}
 			onclick={() => toggleSlideshow()}
-			class="min-h-8 bg-transparent text-xs text-muted-foreground uppercase hover:text-primary active:text-primary cursor-pointer">
+			class="min-h-8 flex flex-row items-center text-xs text-muted-foreground uppercase hover:text-primary active:text-primary cursor-pointer">
 			{slideshow.slideshowStarted ? 'Stop Slideshow' : 'Start Slideshow'}
 		</a>
 	</header>
 	{@render children()}
 </div>
+<style>
+	* {
+		outline: 1px solid red;
+	}
+</style>
