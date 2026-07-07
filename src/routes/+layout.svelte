@@ -4,18 +4,18 @@
     import Logo from '$lib/assets/shared/logo.svg';
 	import { formatSlug } from '$lib/utils';
 	import { setContext } from 'svelte';
-	import { UIState } from '$lib/uiState.svelte';
+	import { Slideshow } from '$lib/uiState.svelte';
 
 	let { children, data } = $props();
-	const uiCtx = new UIState();
+	const slideshow = new Slideshow();
 
-	setContext('uiCtx', uiCtx);
+	setContext('slideshowCtx', slideshow);
 
 	function toggleSlideshow() {
-		if (uiCtx.slideshowStarted) {
-			uiCtx.slideshowStarted = false;
+		if (slideshow.slideshowStarted) {
+			slideshow.stopSlideshow();
 		} else {
-			uiCtx.slideshowStarted = true;
+			slideshow.startSlideshow(data.summaries[0].name);
 		}
 	}
 
@@ -34,10 +34,10 @@
 			<img src={Logo} alt="Galleria Slideshow" class="" />
 		</a>
 	
-		<a href={uiCtx.slideshowStarted ? `/` + formatSlug(data.summaries[0].name) : '/'}
+		<a href={slideshow.slideshowStarted ? `/` + formatSlug(data.summaries[0].name) : '/'}
 			onclick={() => toggleSlideshow()}
 			class="min-h-8 bg-transparent text-xs text-muted-foreground uppercase hover:text-primary active:text-primary cursor-pointer">
-			{uiCtx.slideshowStarted ? 'Stop Slideshow' : 'Start Slideshow'}
+			{slideshow.slideshowStarted ? 'Stop Slideshow' : 'Start Slideshow'}
 		</a>
 	</header>
 	{@render children()}

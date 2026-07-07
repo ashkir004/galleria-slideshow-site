@@ -1,8 +1,8 @@
 <script lang="ts">
     import { formatSlug } from '$lib/utils';
     import { getContext } from 'svelte';
-    import { UIState } from '$lib/uiState.svelte';
-    const uiCtx: UIState = getContext('uiCtx');
+    import { Slideshow } from '$lib/uiState.svelte';
+    const slideshow: Slideshow = getContext('slideshowCtx');
 
     let { data } = $props();
 
@@ -11,7 +11,7 @@
 <main>
     <div class="columns-1 md:columns-2 lg:columns-4 gap-10">
     {#each data.summaries as item (item.name)}
-        <a href={`/` + formatSlug(item.name)} onclick={() => uiCtx.startSlideshow(item.name)}
+        <a href={`/` + formatSlug(item.name)} onclick={() => slideshow.startSlideshow(item.name)}
              class="inline-block mb-10 last:mb-0 hover:cursor-pointer break-inside-avoid">
             <div class="grid grid-cols-1 grid-rows-1 break-inside-avoid hover:cursor-pointer">
                 <div class="col-span-full row-span-full">

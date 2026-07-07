@@ -1,4 +1,4 @@
-export class UIState {
+export class Slideshow {
     slideshowStarted: boolean = $state(false);
     currentSlideshowName: string | null = $state(null);
 
