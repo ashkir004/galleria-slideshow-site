@@ -42,8 +42,8 @@
 	</header>
 	{@render children()}
 </div>
-<style>
+<!-- <style>
 	* {
 		outline: 1px solid red;
 	}
-</style>
+</style> -->
