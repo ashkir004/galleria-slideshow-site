@@ -12,7 +12,7 @@
     <div class="columns-1 md:columns-2 lg:columns-4 gap-10">
     {#each data.summaries as item (item.name)}
         <a href={`/` + formatSlug(item.name)} onclick={() => slideshow.startSlideshow(item.name)}
-             class="inline-block mb-10 last:mb-0 hover:cursor-pointer break-inside-avoid">
+             class="inline-block mb-10 w-full last:mb-0 hover:cursor-pointer break-inside-avoid">
             <div class="grid grid-cols-1 grid-rows-1 break-inside-avoid hover:cursor-pointer">
                 <div class="col-span-full row-span-full">
                     <img src={item.thumbnail} alt={item.name} class="w-full h-auto rounded-lg" />
