@@ -21,15 +21,15 @@
               lg:h-full lg:justify-self-end lg:col-start-5">
 
             <div class="bg-white flex flex-col gap-2 md:gap-6 lg:h-full p-6 md:p-0 md:pb-16 md:pl-16
-                lg:translate-x-[-50%]">
-                <h1 class="text-4xl lg:text-4xl xl:text-5xl font-extrabold text-balance">{data.item?.name}</h1>
+                lg:translate-x-[-40%]  xl:translate-x-[-50%]">
+                <h1 class="text-4xl lg:text-3xl xl:text-5xl font-extrabold text-balance">{data.item?.name}</h1>
                 <p class="text-xs text-gray-600">{data.item?.artist?.name}</p>
             </div>
             <div class="w-full bg-transparent lg:bg-white md:grid md:grid-cols-2 md:justify-items-start lg:grid-cols-1
                 lg:justify-items-start lg:grid-rows-2">
                 <img src={data.item?.artist?.image} alt={data.item?.artist?.name} 
                     class="col-start-2 w-16 md:w-32 h-auto rounded-lg 
-                        lg:col-start-1 lg:row-start-2 lg:translate-x-[-25%]" />
+                        lg:col-start-1 lg:row-start-2 lg:translate-x-1/4 xl:translate-x-[-25%]" />
             </div>
 
         </div>
