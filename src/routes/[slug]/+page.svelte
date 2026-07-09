@@ -29,7 +29,7 @@
                 lg:justify-items-start lg:grid-rows-2">
                 <img src={data.item?.artist?.image} alt={data.item?.artist?.name} 
                     class="col-start-2 w-16 md:w-32 h-auto rounded-lg 
-                        lg:col-start-1 lg:row-start-2 lg:translate-x-1/4 xl:translate-x-[-25%]" />
+                        lg:col-start-1 lg:row-start-2 lg:translate-x-1/4 xl:translate-x-[12%]" />
             </div>
 
         </div>
