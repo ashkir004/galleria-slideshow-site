@@ -1,7 +1,8 @@
 <script lang="ts">
+    import { cn } from "$lib/utils";
 	import ArtworkDescription from "../domain/ArtworkDescription.svelte";
 
-    let { data } = $props();
+    let { data, class: className = '' } = $props();
 </script>
 
-<ArtworkDescription {data} />
+<ArtworkDescription {data} class={cn(``, className)} />

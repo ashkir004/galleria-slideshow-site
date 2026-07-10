@@ -1,8 +1,10 @@
 <script lang="ts">
-	let { data } = $props();
+	import { cn } from "$lib/utils";
+
+	let { data, class: className = '' } = $props();
 </script>
 
-<article class="flex flex-col gap-4 lg:min-w-5/12 lg:items-end xl:items-center">
+<article class={cn("flex flex-col gap-4 lg:min-w-5/12 lg:items-end xl:items-center", className)}>
 	<span
 		class="text-8xl md:text-9xl xl:text-[9rem] text-gray-600/10 z-20 inline-block self-end md:self-start translate-y-1/2 md:translate-y-3/4
                     lg:self-end xl:self-center xl:translate-x-1/4">{data.item?.year}</span

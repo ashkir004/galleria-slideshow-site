@@ -1,10 +1,12 @@
 <script lang="ts">
-	let { data } = $props();
+	import { cn } from "$lib/utils";
+	let { data, class: className = '' } = $props();
 </script>
 
 <div
-	class="w-full bg-transparent lg:bg-white md:grid md:grid-cols-2 md:justify-items-start lg:grid-cols-1
-                lg:justify-items-start lg:grid-rows-2 2xl:grid-cols-2 2xl:justify-items-center"
+	class={cn(`w-full bg-transparent lg:bg-white md:grid md:grid-cols-2 md:justify-items-start lg:grid-cols-1
+                lg:justify-items-start lg:grid-rows-2 2xl:grid-cols-2 2xl:justify-items-center`, 
+				className)}
 >
 	<img
 		src={data.item?.artist?.image}

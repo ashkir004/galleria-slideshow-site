@@ -3,9 +3,10 @@
 	import { formatSlug } from '$lib/utils';
 	import { getContext } from 'svelte';
 	import { Slideshow } from '$lib/uiState.svelte';
+	import { cn } from "$lib/utils";
 
 	const slideshow: Slideshow = getContext('slideshowCtx');
-	let { data } = $props();
+	let { data, class: className = '' } = $props();
 
 	function toggleSlideshow() {
 		if (slideshow.slideshowStarted) {
@@ -16,7 +17,7 @@
 	}
 </script>
 
-<header class="flex flex-row justify-between items-stretch">
+<header class={cn(`flex flex-row justify-between items-stretch`, className)}>
 	<a href="/" class="inline-block w-28 lg:w-32">
 		<img src={Logo} alt="Galleria Slideshow" class="" />
 	</a>

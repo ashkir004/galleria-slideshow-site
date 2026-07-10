@@ -2,13 +2,14 @@
 	import ArtistThumbnail from "../domain/ArtistThumbnail.svelte";
     import Artwork from "../domain/Artwork.svelte";
     import ArtworkTitle from "../domain/ArtworkTitle.svelte";
+	import { cn } from "$lib/utils";
 
-	let { data } = $props();
+	let { data, class: className = '' } = $props();
 </script>
 
 <header
-	class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[1fr_1fr_1fr_1fr_1fr_1fr] lg:max-h-max
-     2xl:grid-cols-4"
+	class={cn(`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[1fr_1fr_1fr_1fr_1fr_1fr] lg:max-h-max
+     2xl:grid-cols-4`, className)}
 >
 	<Artwork {data} />
 
