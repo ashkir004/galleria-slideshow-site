@@ -7,14 +7,10 @@
 
 </script>
 
-<main class="flex flex-col md:gap-16 lg:flex-row lg:gap-0 bg-white">
-    <Hero {data} />
+<main class="bg-white grid grid-cols-1 
+    lg:grid-cols-2
+"
+>
+    <Hero {data} class="" />
     <ArtworkDescription {data} />
 </main>
-
-
-<!-- <style>
-    * {
-        outline: 1px solid red;
-    }
-</style> -->

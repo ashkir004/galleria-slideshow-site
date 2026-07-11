@@ -7,12 +7,14 @@
 </script>
 
 	<div class={cn(
-		"bg-white flex flex-col gap-2 md:gap-6 lg:h-full p-6 md:p-0 md:pb-16 md:pl-16",
-		"lg:translate-x-[-40%] xl:translate-x-[-50%] 2xl:translate-x-[-25%]",
+		"p-6 flex flex-col gap-2",
 		className
 	)}>
 	<h1
-		class="text-xl md:text-3xl xl:text-5xl 2xl:text-6xl 2xl:leading-20 font-extrabold text-balance"
+		class="font-extrabold 
+		text-balance text-[1.5rem] leading-tight md:text-[3.5rem] md:leading-[1.15]
+		lg:text-[2.5rem]
+		"
 	>
 		{data.item?.name}
 	</h1>

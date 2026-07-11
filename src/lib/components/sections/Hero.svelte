@@ -8,18 +8,42 @@
 </script>
 
 <header
-	class={cn(`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[1fr_1fr_1fr_1fr_1fr_1fr] lg:max-h-max
-     2xl:grid-cols-4`, className)}
+	class={cn(`
+	grid grid-cols-1 
+	md:grid-cols-3 
+	lg:grid-cols-4
+	lg:grid-rows-[auto_4rem]
+	`, 
+	className)}
 >
-	<Artwork {data} />
+	<Artwork {data} class="col-span-full row-span-full
+		md:col-start-1 md:col-end-3
+		lg:col-start-1 lg:col-end-4
+		lg:row-start-1 lg:row-end-2
+	" />
 
-	<div
-		class="col-span-full row-span-full self-end z-10 w-10/12 translate-y-1/2
-            md:col-start-2 md:self-start md:w-full md:translate-y-0 flex flex-col
-              lg:h-full lg:justify-self-end lg:col-start-5
-              2xl:col-start-3"
+	<div class="flex flex-col
+		max-w-5/6 -translate-y-1/4 
+		md:translate-y-0 
+		z-99 md:w-full
+		md:col-start-2 md:col-end-4 
+		md:row-start-1
+		md:justify-self-start
+		lg:col-start-3 lg:col-end-5
+		lg:justify-self-end
+		lg:translate-x-[16%]
+		lg:justify-between
+		xl:row-span-full
+		xl:translate-x-[20%]
+		"
 	>
-		<ArtworkTitle {data} />
-		<ArtistThumbnail {data} />
+		<ArtworkTitle {data} class="flex flex-col bg-white pl-8" />
+		<ArtistThumbnail {data} class="
+			md:flex md:flex-row 
+			md:justify-end
+			xl:justify-center
+
+			" 
+			/>
 	</div>
 </header>
