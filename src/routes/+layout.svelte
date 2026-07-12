@@ -21,7 +21,7 @@
 	<link rel="icon" href={favicon} />
 </svelte:head>
 
-<div class="px-7 pt-7 flex flex-col gap-10 lg:gap-24 min-w-screen min-h-screen">
+<div class="px-7 pt-7 flex flex-col gap-10 lg:gap-24 max-w-screen max-h-screen">
 	<Header {data} class="pb-6 lg:pb-10 border-b border-gray-200" />
 	{@render children()}
 </div>
