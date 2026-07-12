@@ -9,6 +9,10 @@
 	const slideshow = new Slideshow();
 
 	setContext('slideshowCtx', slideshow);
+
+	$effect(() => {
+		slideshow.setItems(data.summaries);
+	});
 </script>
 
 <svelte:head>
@@ -21,9 +25,3 @@
 	<Header {data} />
 	{@render children()}
 </div>
-
-<!-- <style>
-	* {
-		outline: 1px solid red;
-	}
-</style> -->
