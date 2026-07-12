@@ -17,7 +17,7 @@
 	<link rel="icon" href={favicon} />
 </svelte:head>
 
-<div class="p-7 flex flex-col gap-10 min-w-screen min-h-screen">
+<div class="px-7 pt-7 flex flex-col gap-10 min-w-screen min-h-screen">
 	<Header {data} />
 	{@render children()}
 </div>
