@@ -3,6 +3,8 @@
     import Artwork from "../domain/Artwork.svelte";
     import ArtworkTitle from "../domain/ArtworkTitle.svelte";
 	import { cn } from "$lib/utils";
+	import * as Dialog from "$lib/components/ui/dialog/index";
+	import ArtworkLightbox from "../domain/ArtworkLightbox.svelte";
 
 	let { data, class: className = '' } = $props();
 </script>
@@ -25,7 +27,7 @@
 	<div class="flex flex-col
 		max-w-5/6 -translate-y-1/4 
 		md:translate-y-0 
-		z-99 md:w-full
+		z-10 md:w-full
 		md:col-start-2 md:col-end-4 
 		md:row-start-1
 		md:justify-self-start
@@ -46,4 +48,5 @@
 			" 
 			/>
 	</div>
+	<ArtworkLightbox {data} class="m-2 col-span-full row-span-full md:self-end lg:row-start-1 lg:row-end-2" />
 </header>
