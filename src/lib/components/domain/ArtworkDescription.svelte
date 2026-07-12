@@ -20,7 +20,7 @@
 			{data.item?.description}
 		</p>
 		<a
-			class="uppercase text-sm text-gray-500"
+			class="uppercase text-sm text-gray-500 hover:text-black"
 			href={data.item?.source}
 			target="_blank"
 			rel="noopener noreferrer">Go to source</a
