@@ -35,7 +35,7 @@
 		lg:justify-self-end
 		lg:translate-x-[16%]
 		lg:justify-between
-		xl:row-span-full
+		lg:row-span-full
 		xl:translate-x-[20%]
 		"
 	>
@@ -44,7 +44,6 @@
 			md:flex md:flex-row 
 			md:justify-end
 			xl:justify-center
-
 			" 
 			/>
 	</div>

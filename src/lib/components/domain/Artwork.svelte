@@ -12,7 +12,7 @@
         <img
             src={data.item?.images?.hero?.small}
             alt={data.item?.name}
-            class="w-full h-full object-contain object-top-left"
+            class="w-full h-full object-cover object-top-left"
         />
     </picture>
 </div>
