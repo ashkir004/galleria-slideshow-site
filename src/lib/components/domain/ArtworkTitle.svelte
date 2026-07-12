@@ -1,17 +1,12 @@
 <script lang="ts">
-	import { cn } from "$lib/utils";
+	import { cn } from '$lib/utils';
 
-	let { 	data, 
-			class: className = '' 
-		} = $props();
+	let { data, class: className = '' } = $props();
 </script>
 
-	<div class={cn(
-		"p-6 flex flex-col gap-2",
-		className
-	)}>
+<div class={cn('p-6 flex flex-col gap-2', className)}>
 	<h1
-		class="font-extrabold 
+		class="font-extrabold
 		text-balance text-[1.5rem] leading-tight md:text-[3.5rem] md:leading-[1.15]
 		lg:text-[2.5rem]
 		"

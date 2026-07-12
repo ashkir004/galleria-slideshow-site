@@ -35,7 +35,9 @@
 	</div>
 	<div class="flex flex-row gap-6">
 		<a
-			href={previousItem ? '/' + formatSlug(previousItem?.name) : '/' + formatSlug(currentItem?.name)}
+			href={previousItem
+				? '/' + formatSlug(previousItem?.name)
+				: '/' + formatSlug(currentItem?.name)}
 			data-disabled={previousItem ? false : true}
 			onclick={previousItem ? null : (e) => e.preventDefault()}
 			class="text-xs text-gray-600 hover:text-primary active:text-primary w-4 md:w-6

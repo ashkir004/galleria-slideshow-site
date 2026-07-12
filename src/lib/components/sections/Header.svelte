@@ -3,7 +3,7 @@
 	import { formatSlug } from '$lib/utils';
 	import { getContext } from 'svelte';
 	import { Slideshow } from '$lib/uiState.svelte';
-	import { cn } from "$lib/utils";
+	import { cn } from '$lib/utils';
 
 	const slideshow: Slideshow = getContext('slideshowCtx');
 	let { data, class: className = '' } = $props();

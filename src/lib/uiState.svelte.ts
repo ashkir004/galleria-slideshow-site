@@ -1,59 +1,59 @@
 export class Slideshow {
-    slideshowStarted: boolean = $state(false);
-    currentSlideshowName: string | null = $state(null);
-    currentSlideIndex: number = $state(0);
-    totalSlides: number = $state(0);
+	slideshowStarted: boolean = $state(false);
+	currentSlideshowName: string | null = $state(null);
+	currentSlideIndex: number = $state(0);
+	totalSlides: number = $state(0);
 
-    items: Slide[] = $state([]);
+	items: Slide[] = $state([]);
 
-    setItems(items: Slide[]) {
-        this.items = items;
-    }
+	setItems(items: Slide[]) {
+		this.items = items;
+	}
 
-    getNextItem(currentSlide?: Slide) {
-        const currentIndex = this.items.findIndex((item) => item.name === currentSlide?.name);
-        if (currentIndex < this.items.length - 1) {
-            return this.items[currentIndex + 1];
-        }
+	getNextItem(currentSlide?: Slide) {
+		const currentIndex = this.items.findIndex((item) => item.name === currentSlide?.name);
+		if (currentIndex < this.items.length - 1) {
+			return this.items[currentIndex + 1];
+		}
 
-        return null;
-    }
+		return null;
+	}
 
-    getPreviousItem(currentSlide?: Slide) {
-        const currentIndex = this.items.findIndex((item) => item.name === currentSlide?.name);
-        if (currentIndex > 0) {
-            return this.items[currentIndex - 1];
-        }
+	getPreviousItem(currentSlide?: Slide) {
+		const currentIndex = this.items.findIndex((item) => item.name === currentSlide?.name);
+		if (currentIndex > 0) {
+			return this.items[currentIndex - 1];
+		}
 
-        return null;
-    }
+		return null;
+	}
 
-    startSlideshow(name: string) {
-        this.slideshowStarted = true;
-        this.currentSlideshowName = name;
-    }
+	startSlideshow(name: string) {
+		this.slideshowStarted = true;
+		this.currentSlideshowName = name;
+	}
 
-    stopSlideshow() {
-        this.slideshowStarted = false;
-        this.currentSlideshowName = null;
-    }
+	stopSlideshow() {
+		this.slideshowStarted = false;
+		this.currentSlideshowName = null;
+	}
 }
 
 type Slide = {
-    name: string;
-    year?: number;
-    description?: string;
-    source?: string;
-    artist?: {
-      image: string;
-      name: string;
-    };
-    images?: {
-      thumbnail: string;
-      hero: {
-        small: string;
-        large: string;
-      };
-      gallery: string;
-    };
+	name: string;
+	year?: number;
+	description?: string;
+	source?: string;
+	artist?: {
+		image: string;
+		name: string;
+	};
+	images?: {
+		thumbnail: string;
+		hero: {
+			small: string;
+			large: string;
+		};
+		gallery: string;
+	};
 };

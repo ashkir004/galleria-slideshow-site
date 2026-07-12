@@ -1,12 +1,9 @@
 <script lang="ts">
-	import { cn } from "$lib/utils";
+	import { cn } from '$lib/utils';
 	let { data, class: className = '' } = $props();
 </script>
 
-<div
-	class={cn(``, 
-				className)}
->
+<div class={cn(``, className)}>
 	<img
 		src={data.item?.artist?.image}
 		alt={data.item?.artist?.name}
