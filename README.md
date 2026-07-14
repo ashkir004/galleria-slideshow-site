@@ -1,42 +1,38 @@
-# sv
+# Galleria Slideshow
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+## What am I most proud of?
 
-## Creating a project
+- I am proud that I used the routing capability of sveltekit and anchor links, to implement navigation of the artwork pages.
 
-If you're seeing this, you've probably already done this step. Congrats!
+## What part fought back the most?
 
-```sh
-# create a new project
-npx sv create my-app
-```
+- I still have errors on anchor links. 
 
-To recreate this project with the same configuration:
+`Unexpected href link without resolve().`
 
-```sh
-# recreate this project
-pnpm dlx sv@0.16.1 create --template minimal --types ts --add prettier eslint tailwindcss="plugins:none" --install pnpm .
-```
+## If another developer cloned my repository tomorrow... What I hope they notice is?
 
-## Developing
+- Use of svelte `Context` to give every artwork page access to a shared navigation state.
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+- Use of `+page.server.ts` to load necessary data item just for the respective artwork page.
 
-```sh
-npm run dev
+- Use of URLs to model navigation.
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
+## If I could rebuild the project tomorrow... What would I redesign?
 
-## Building
+- Maybe use absolute positioning together with CSS grid for layout, instead of using `translate` so it shows consistent layout across responsive sizes. 
 
-To create a production version of your app:
+## What did this project teach me that my previous Frontend Mentor project didn't?
 
-```sh
-npm run build
-```
+- Using `Columns` css feature to build the masonry layout.
 
-You can preview the production build with `npm run preview`.
+- Using `min-h-[90vh]` and `overflow-y-auto` to fit lightbox in screen and provide scrolling capability respectively.
 
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+## What assumption did this project change for me?
+
+- Use the browser and framework first, then reach for libraries only when the requirements justify them. CSS `Columns` may not be a perfect masonry algorithm, but it meets product's needs and avoids complexity.
+
+
+### Links
+
+- Live Site: [Galleria Art Slideshow - Netlify](https://galleria-art-slideshow.netlify.app/)
