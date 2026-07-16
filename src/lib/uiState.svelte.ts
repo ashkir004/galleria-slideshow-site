@@ -37,6 +37,14 @@ export class Slideshow {
 		this.slideshowStarted = false;
 		this.currentSlideshowName = null;
 	}
+
+	getProgress(currentSlide?: Slide) {
+		const currentIndex = this.items.findIndex((item) => item.name === currentSlide?.name);
+		if (currentIndex >= 0 && this.items.length > 0) {
+			return (currentIndex + 1) / this.items.length;
+		}
+		return 0;
+	}
 }
 
 type Slide = {
