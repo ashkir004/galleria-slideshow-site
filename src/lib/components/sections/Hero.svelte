@@ -3,7 +3,6 @@
 	import Artwork from '../domain/Artwork.svelte';
 	import ArtworkTitle from '../domain/ArtworkTitle.svelte';
 	import { cn } from '$lib/utils';
-	import * as Dialog from '$lib/components/ui/dialog/index';
 	import ArtworkLightbox from '../domain/ArtworkLightbox.svelte';
 
 	let { data, class: className = '' } = $props();

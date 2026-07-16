@@ -3,7 +3,6 @@
 	import * as Dialog from '$lib/components/ui/dialog/index';
 	import viewIcon from '$lib/assets/shared/icon-view-image.svg';
 	import { buttonVariants } from '../ui/button';
-	import { scale } from 'svelte/transition';
 
 	type Props = {
 		data: {
