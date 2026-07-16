@@ -3,6 +3,7 @@
 	import * as Dialog from '$lib/components/ui/dialog/index';
 	import viewIcon from '$lib/assets/shared/icon-view-image.svg';
 	import { buttonVariants } from '../ui/button';
+	import { scale } from 'svelte/transition';
 
 	type Props = {
 		data: {
@@ -28,10 +29,13 @@
 			<img src={viewIcon} alt="View Artwork" class="inline-block" />
 			View Artwork
 		</Dialog.Trigger>
-		<Dialog.Overlay class="bg-black/60">
+		<Dialog.Overlay class="bg-black/60 data-[state=open]:animate-in data-[state=closed]:animate-out
+		data-[state=open]:fade-in-0 data-[state=closed]:fade-out-0">
 			<Dialog.Content
 				class="p-0 flex flex-col gap-6 ring-0 md:min-w-lg lg:min-w-xl xl:min-w-2xl bg-transparent 
-                overflow-y-auto max-h-[90vh]"
+                overflow-y-auto max-h-[90vh]
+				data-[state=open]:animate-in data-[state=closed]:animate-out
+				data-[state=open]:fade-in-0 data-[state=closed]:fade-out-0"
 				showCloseButton={false}
 			>
 				<Dialog.Header class="flex flex-row justify-end">
