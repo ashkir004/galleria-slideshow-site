@@ -17,10 +17,6 @@
 	};
 
 	let { data, class: className = '' } = $props() as Props;
-
-	$effect(() => {
-		console.log('ArtworkLightbox data:', data);
-	});
 </script>
 
 <div class={cn(``, className)}>
