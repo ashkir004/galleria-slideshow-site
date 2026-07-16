@@ -28,7 +28,7 @@
 	</article>
 	<footer
 		class="bg-white flex flex-col justify-between items-center gap-6
-		pb-4 md:pb-6 fixed left-0 bottom-0 w-full z-50 px-6 py-4 pt-0 md:px-10 md:py-6 md:pt-0"
+		pb-4 md:pb-6 fixed left-0 bottom-0 w-full z-30 px-6 py-4 pt-0 md:px-10 md:py-6 md:pt-0"
 	>
 		<Progress
 			value={progress}
